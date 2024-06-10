@@ -8,6 +8,8 @@ let input = {
     c: (a, b, c) => a + b - c,
   },
   d: (a, b, c) => a - b - c,
+  e: 1,
+  f: true,
 };
 
 function pipe(object) {
@@ -17,12 +19,24 @@ function pipe(object) {
     for (let key in object) {
       if (typeof object[key] == "function") {
         outputObject[key] = object[key](...inputArguments);
-      } else {
+      } else if (typeof object[key] == "object") {
         outputObject[key] = pipe(object[key])(...inputArguments);
+      } else {
+        outputObject[key] = object[key];
       }
     }
     return outputObject;
   };
 }
 
-console.log(pipe(input)(1, 2, 3));
+console.log(pipe(input)(1, 1, 1));
+
+// {
+//   a: {
+//     b: 3,
+//     c: 1,
+//   },
+//   d: -1,
+//   e: 1,
+//   f: true,
+// };

@@ -2,11 +2,6 @@ const onChange = (e) => {
   console.log(e.target.value);
 };
 
-const debouncedSearch = debounce(onChange, 1000);
-
-const input = document.getElementById("search");
-input.addEventListener("keyup", debouncedSearch);
-
 function debounce(callBack, delay, option = { leading: true, trailing: true }) {
   let timerId;
 
@@ -31,3 +26,8 @@ function debounce(callBack, delay, option = { leading: true, trailing: true }) {
     }
   };
 }
+
+const debouncedSearch = debounce(onChange, 1000);
+
+const input = document.getElementById("search"); //Input Element
+input.addEventListener("keyup", debouncedSearch);

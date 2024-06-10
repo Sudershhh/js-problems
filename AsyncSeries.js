@@ -32,3 +32,10 @@ async function executeSeries(promisesArray, callback) {
 }
 
 executeSeries(promises, callback);
+
+//OUTPUT
+// Completing 3
+// Completing 1
+// Completing 7
+// Completing 2
+// Completing 5
