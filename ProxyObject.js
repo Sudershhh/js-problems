@@ -23,3 +23,8 @@ console.log(proxyObject.i);
 console.log(proxyObject.i);
 console.log(proxyObject.i);
 console.log(proxyObject.i);
+
+// 1
+// 2
+// 3
+// 4
