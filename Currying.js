@@ -21,3 +21,9 @@ function sum(initialSum = 0, ...args) {
 console.log(sum(1, 2)(3)());
 console.log(sum(1)(2, 3)());
 console.log(sum(1, 2, 3)());
+
+//OUTPUT
+
+// 6
+// 6
+// 6
