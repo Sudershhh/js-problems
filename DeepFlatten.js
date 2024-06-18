@@ -10,16 +10,6 @@ let input = {
   },
 };
 
-// Output:
-// {
-//   "A": "12"
-//   "B": 23,
-//   "C.O.L": 56,
-//   "C.P": 23,
-//   "C.Q.0": 1,
-//   "C.Q.1": 2,
-// }
-
 function deepFlatten(parentKey = "", object) {
   let outputObject = {};
   let pk;
@@ -42,3 +32,13 @@ function deepFlatten(parentKey = "", object) {
 
 let outputObject = deepFlatten("", input);
 console.log(outputObject);
+
+// Output:
+// {
+//   "A": "12"
+//   "B": 23,
+//   "C.O.L": 56,
+//   "C.P": 23,
+//   "C.Q.0": 1,
+//   "C.Q.1": 2,
+// }
