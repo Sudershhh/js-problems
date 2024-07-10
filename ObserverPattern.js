@@ -74,13 +74,9 @@ class InvestmentManager extends Subscriber {
 }
 
 const stockMarket = new StockMarket();
-
 const warrenBuffet = new Investor("Warren Buffet");
-
 const cathieWood = new Investor("Cathie Wood");
-
 const goldmanSachs = new Analyst("Goldman Sachs");
-
 const vanEck = new InvestmentManager("VanEck");
 
 stockMarket.subscribe(warrenBuffet);
@@ -92,7 +88,6 @@ stockMarket.updateStockPrice("AAPL", 226.34);
 stockMarket.updateStockPrice("TSLA", 251.52);
 
 stockMarket.unSubscribe(cathieWood);
-
 stockMarket.updateStockPrice("AAPL", 213.98);
 
 // Stock Price Updated : AAPL is now $226.34
